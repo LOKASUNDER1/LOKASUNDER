@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ดาวน์โหลดไฟล์ - LOKASUNDER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            animation: background-animation 10s ease infinite;
+        }
+
+        @keyframes background-animation {
+            0% { background-color: #f0f0f0; }
+            50% { background-color: #e0e0e0; }
+            100% { background-color: #f0f0f0; }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #282c34;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em; /* Increased logo font size */
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px; /* Increased margin for better spacing */
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.2em; /* Increased font size */
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em; /* Increased heading size */
+            margin-bottom: 20px;
+        }
+
+        .file-download {
+            margin: 20px 0;
+            background-color: #ff6347;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 200px; /* Fixed width */
+            font-size: 1.2em; /* Increased button font size */
+        }
+
+        .file-download:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+
+        .toggle-download {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 25px;
+            cursor: pointer;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 1.2em; /* Increased button font size */
+        }
+
+        .toggle-download:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #download-content {
+            display: none; /* Initially hidden */
+            text-align: left;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            transition: transform 0.3s;
+        }
+
+        .file-item:hover {
+            transform: scale(1.02);
+        }
+
+        .file-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #282c34;
+            color: white;
+            font-size: 1.2em; /* Increased footer font size */
+        }
+
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff4500;
+        }
+    </style>
+    <script>
+        function toggleContent() {
+            const content = document.getElementById('download-content');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block'; // Show content
+            } else {
+                content.style.display = 'none'; // Hide content
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="logo">LOKASUNDER</div>
+    <nav>
+        <a href="index.html">เกี่ยวกับเรา</a>
+        <a href="services.html">บริการ</a>
+        <a href="download.html">ดาวน์โหลด</a>
+        <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h1>ดาวน์โหลดไฟล์</h1>
+    <p>เลือกไฟล์ที่คุณต้องการดาวน์โหลด:</p>
+    
+    <div class="toggle-download" onclick="toggleContent()">สอนทำให้ลื่น v.1</div>
+    
+    <div id="download-content">
+        <p>ไฟล์ที่พร้อมให้ดาวน์โหลด:</p>
+        
+        <div class="file-item">
+            <img src="/image/BlueStacks-5.webp" alt="BlueStacksv5">
+            <a href="https://drive.google.com/file/d/15sxOpCKYo5QoTW4BoVGMjEElvjAdIHIe/view?usp=sharing" class="file-download">BlueStacksv5</a>
+        </div>
+        
+        <div class="file-item">
+            <img src="/image/logo.png" alt="ตัวรูทBlueStacks">
+            <a href="https://drive.google.com/file/d/1IlpCoPTKv0Ae71H55k67wURpKPCKLeyj/view?usp=sharing" class="file-download">ตัวรูทBlueStacks</a>
+        </div>
+        
+        <div class="file-item">
+            <img src="/image/unnamed.webp" alt="Free FireX86">
+            <a href="https://drive.google.com/file/d/1X_8evziygUSIf2MQUYYkX4-MZco9_qmY/view?usp=sharing" class="file-download">Free FireX86</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>ข้อมูลติดต่อ: email@example.com | โทร: 012-345-6789</p>
+    <p>© 2024 LOKASUNDER | <a href="#" style="color: white;">ข้อกำหนดการใช้งาน</a> | <a href="#" style="color: white;">นโยบายความเป็นส่วนตัว</a></p>
+</footer>
+
+</body>
+</html>
